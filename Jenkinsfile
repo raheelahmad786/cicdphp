@@ -33,7 +33,7 @@ pipeline {
             steps { 
                 sh 'docker ps -f name=phpc -q | xargs --no-run-if-empty docker container stop'
                 sh 'docker container ls -a -fname=phpc -q | xargs -r docker container rm'
-                sh "docker run -dt --name phpc -p 8080:80 $registry:php$BUILD_NUMBER" 
+                sh "docker run -dt --name phpc -p 3000:3000 $registry:php$BUILD_NUMBER" 
             }
         } 
 
