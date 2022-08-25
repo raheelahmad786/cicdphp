@@ -1,7 +1,7 @@
 pipeline {
     environment {
         registry = "raheelahmad20/cicd" 
-        registryCredential = 'dockerhub' 
+        registryCredential = 'dockerhubphp' 
        // registry = 'cicdrepotemp'
         dockerImage = ''
     }
